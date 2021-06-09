@@ -1,0 +1,13 @@
+a.out
+checkcpupercentage
+checkcpupercentage.c
+commands.txt
+files.txt
+input.txt
+makefile
+myshell
+myshell.c
+ouput.txt
+output.txt
+Problem Statement.pdf
+references.txt

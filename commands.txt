@@ -1,0 +1,7 @@
+ps -a
+ls
+checkresidentmemory 5233
+pwd ; checkcpupercentage 5233
+date
+listFiles
+sortFile <input.txt >output.txt
