@@ -1,1 +1,0 @@
-user mode cpu percentage: 88.10%

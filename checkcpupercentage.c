@@ -48,9 +48,6 @@ int main(int argc, char *argv[]){
     //reading total time from /proc/stat
     long double totaltime[2];
 
-    //No of cpu cores
-    int cores=sysconf(_SC_NPROCESSORS_ONLN);
-
     char *readbuffer_pid=calloc(200,sizeof(char));
     char *readbuffer_totaltime=calloc(200,sizeof(char));
 
@@ -86,8 +83,8 @@ int main(int argc, char *argv[]){
     close(fdcpu);
 
     long double ttime_diff=totaltime[1]-totaltime[0];
-    long double utime_percentage= ((utime[1]-utime[0])*cores*100)/ttime_diff;
-    long double stime_percentage= ((stime[1]-stime[0])*cores*100)/ttime_diff;
+    long double utime_percentage= ((utime[1]-utime[0])*100)/ttime_diff;
+    long double stime_percentage= ((stime[1]-stime[0])*100)/ttime_diff;
 
     printf("user mode cpu percentage: %0.2Lf%%\n",utime_percentage);
     printf("system mode cpu percentage: %0.2Lf%%\n",stime_percentage);
